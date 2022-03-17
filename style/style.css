@@ -1,0 +1,17 @@
+.card {
+  /* place holder style */
+  width: 300px;
+  height: 500px;
+  margin: auto;
+  background: aquamarine;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px grey;
+}
+
+body {
+  justify-items: center;
+  align-items: center;
+  padding: 100px;
+  display: flex;
+}
