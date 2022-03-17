@@ -29,33 +29,12 @@ function cardHoverMove(event) {
     var x = event.pageX - cardRect.left;
     var y = event.pageY - cardRect.top;
 
-    // console.log(`x: ${x}, y: ${y}`);
-    // console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`);
-    // console.log(`screenX: ${event.screenX}, screenY: ${event.screenY}`);
-    // console.log(`pageX: ${event.pageX}, pageY: ${event.pageY}`);
-
-
-    //! it is disabled because it is not a requirement 
-    //* this section is to make sure the coordinates dont go overboard
-    // x = x < 0 ? 0 : x;
-    // y = y < 0 ? 0 : y;
-    // x = x > cardRect.width ? cardRect.width : x;
-    // y = y > cardRect.height ? cardRect.height : y;
-
-
-
-
     //* the amount of rotation around the x axis and y axis
     //* the division is to make sure that rotX and rotY ar max 15 and min -15
     var rotX = (y - yMidPoint) / (yMidPoint / 15);
     var rotY = (xMidPoint - x) / (xMidPoint / 15);
 
     card.style.transform = ` perspective(${cardRect.height}px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1, 1, 1)`;
-    // card.style = "transform: perspective(" + cardRect.height + "px) rotateX(" + rotX + "deg) rotateY(" + rotY + "deg) scale3d(1, 1, 1);";
-
-    //! this for additional understanding of changing the style of an element
-    // card.style.background = "red";
-    // card.style.boxShadow = "20px 20px 20px blue";
 }
 
 /**
